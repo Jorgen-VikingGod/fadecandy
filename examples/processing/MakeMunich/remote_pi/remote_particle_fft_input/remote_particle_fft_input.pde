@@ -20,12 +20,12 @@ float opacity = 50;
 float minSize = 0.1;
 float sizeScale = 0.6;
 
-int w = 16;
-int h = 16;
+int w = 30;
+int h = 30;
 
 void setup()
 {
-  size(w*20, h*20, P3D);
+  size(w*10, h*10, P3D);
 
   minim = new Minim(this); 
 
@@ -39,7 +39,7 @@ void setup()
   colors = loadImage("colors3.png");
 
   // Connect to the local instance of fcserver
-  opc = new OPC(this, "192.168.0.106", 7890);
+  opc = new OPC(this, "192.168.0.104", 7890);
   //opc.ledGrid(0, 30, 30, width * 1/2, height * 1/2, height/30, height/30, 0, true);
   opc.ledGrid(0, w, h, width * 1/2, height * 1/2, height/w, height/h, 0, true);
   // Make the status LED quiet

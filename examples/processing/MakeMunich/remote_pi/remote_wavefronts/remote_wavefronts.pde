@@ -41,8 +41,8 @@ Ring rings[];
 float smoothX, smoothY;
 boolean f = false;
 
-int w = 32;
-int h = 32;
+int w = 30;
+int h = 30;
 
 void setup()
 {
@@ -50,7 +50,7 @@ void setup()
   colorMode(HSB, 100);
   texture = loadImage("ring.png");
 
-  opc = new OPC(this, "192.168.0.106", 7890);
+  opc = new OPC(this, "192.168.0.104", 7890);
   opc.ledGrid(0, w, h, width * 1/2, height * 1/2, height/w, height/h, 0, true);
   
   // We can have up to 100 rings. They all start out invisible.

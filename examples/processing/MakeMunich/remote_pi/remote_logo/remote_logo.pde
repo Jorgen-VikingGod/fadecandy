@@ -1,8 +1,8 @@
 OPC opc;
 PImage im;
 
-int w = 32;
-int h = 32;
+int w = 30;
+int h = 30;
 
 void setup()
 {
@@ -13,7 +13,7 @@ void setup()
   im = loadImage("logo-invert3.jpg");
 
   // Connect to the local instance of fcserver
-  opc = new OPC(this, "192.168.0.106", 7890);
+  opc = new OPC(this, "192.168.0.104", 7890);
 
   // Map one 64-LED strip to the center of the window
   opc.ledGrid(0, w, h, width * 1/2, height * 1/2, height/w, height/h, 0, true);

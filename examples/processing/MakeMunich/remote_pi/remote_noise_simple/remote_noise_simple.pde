@@ -4,14 +4,16 @@ OPC opc;
 
 PImage clouds;
 
-int w = 9;
-int h = 6;
+//int w = 9;
+//int h = 6;
+int w = 30;
+int h = 30;
 int pW = 16;
 int pH = 8;
 
 void setup()
 {
-  size(w*20, h*20);
+  size(w*10, h*10);
   
   colorMode(HSB, 100);
   noiseDetail(5, 0.4);
@@ -20,7 +22,7 @@ void setup()
   // Render the noise to a smaller image, it's faster than updating the entire window.
   clouds = createImage(128, 128, RGB);
 
-  opc = new OPC(this, "192.168.0.106", 7890);
+  opc = new OPC(this, "192.168.0.104", 7890);
   /* each panel (1 to 8) has 16x8 pixel
      connected from 1 to 8 in chain
   .---------+---------.

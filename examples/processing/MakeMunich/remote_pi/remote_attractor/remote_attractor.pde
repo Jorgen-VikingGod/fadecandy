@@ -17,12 +17,12 @@ Particle[] particles;
 PVector[] corners;
 float epoch = 0;
 
-int w = 9;
-int h = 6;
+int w = 30;
+int h = 30;
 
 void setup()
 {
-  size(w*20, h*20, P3D);
+  size(w*10, h*10, P3D);
   frameRate(30);
 
   dot = loadImage("dot.png");
@@ -30,7 +30,7 @@ void setup()
   colors.loadPixels();
 
   // Connect to the local instance of fcserver
-  opc = new OPC(this, "192.168.0.106", 7890);
+  opc = new OPC(this, "192.168.0.104", 7890);
   opc.ledGrid(0, w, h, width * 1/2, height * 1/2, width/w, height/h, 0, true);
   // Make the status LED quiet
   opc.setStatusLed(false);

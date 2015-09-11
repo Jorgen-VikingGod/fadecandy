@@ -17,18 +17,18 @@ float[] fftFilter;
 String filename = "song.mp3";//"AllyTheFiddle-Lost_at_the_Gates.mp3";//"song.mp3";//AllyTheFiddle-Lost_at_the_Gates.mp3";
 
 float spin = 0.001;
-float radiansPerBucket = radians(2);
+float radiansPerBucket = radians(20);
 float decay = 0.90;
-float opacity = 100;
+float opacity = 75;
 float minSize = 0.1;
 float sizeScale = 0.6;
 
-int w = 9;
-int h = 6;
+int w = 30;
+int h = 30;
 
 void setup()
 {
-  size(w*20, h*20, P3D);
+  size(w*10, h*10, P3D);
   minim = new Minim(this); 
 
   // Small buffer size!
@@ -41,7 +41,7 @@ void setup()
   colors = loadImage("colors.png");
 
   // Connect to the local instance of fcserver
-  opc = new OPC(this, "192.168.0.106", 7890);
+  opc = new OPC(this, "192.168.0.104", 7890);
   opc.ledGrid(0, w, h, width * 1/2, height * 1/2, width/w, height/h, 0, true);
   // Make the status LED quiet
   opc.setStatusLed(false);
