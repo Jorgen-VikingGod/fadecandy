@@ -14,7 +14,9 @@ AudioPlayer sound;
 FFT fft;
 float[] fftFilter;
 
-String filename = "song.mp3";//"AllyTheFiddle-Lost_at_the_Gates.mp3";//"song.mp3";//AllyTheFiddle-Lost_at_the_Gates.mp3";
+String filename1 = "AllyTheFiddle-Lost_at_the_Gates.mp3";
+String filename2 = "song.mp3";
+String filename;
 
 float spin = 0.001;
 float radiansPerBucket = radians(20);
@@ -28,6 +30,9 @@ int h = 30;
 
 void setup()
 {
+  // change song: filename1 / filename2
+  filename = filename1;
+  
   size(w*10, h*10, P3D);
   minim = new Minim(this); 
 
@@ -41,7 +46,7 @@ void setup()
   colors = loadImage("colors.png");
 
   // Connect to the local instance of fcserver
-  opc = new OPC(this, "192.168.0.104", 7890);
+  opc = new OPC(this, "192.168.42.1", 7890);
   opc.ledGrid(0, w, h, width * 1/2, height * 1/2, width/w, height/h, 0, true);
   // Make the status LED quiet
   opc.setStatusLed(false);

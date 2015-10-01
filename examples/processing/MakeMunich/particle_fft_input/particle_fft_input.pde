@@ -14,9 +14,9 @@ FFT fft;
 float[] fftFilter;
 
 float spin = 0.001;
-float radiansPerBucket = radians(2);
+float radiansPerBucket = radians(1);
 float decay = 0.90;
-float opacity = 50;
+float opacity = 10;
 float minSize = 0.1;
 float sizeScale = 0.6;
 

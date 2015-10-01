@@ -12,7 +12,7 @@ void setup()
   im = loadImage("flames.jpeg");
 
   // Connect to the local instance of fcserver
-  opc = new OPC(this, "192.168.0.104", 7890);
+  opc = new OPC(this, "192.168.42.1", 7890);
   opc.ledGrid(0, w, h, width * 1/2, height * 1/2, width/w, height/h, 0, true);
   // Make the status LED quiet
   opc.setStatusLed(false);

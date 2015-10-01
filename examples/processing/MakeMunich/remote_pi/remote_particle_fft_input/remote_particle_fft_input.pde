@@ -39,7 +39,7 @@ void setup()
   colors = loadImage("colors3.png");
 
   // Connect to the local instance of fcserver
-  opc = new OPC(this, "192.168.0.104", 7890);
+  opc = new OPC(this, "192.168.42.1", 7890);
   //opc.ledGrid(0, 30, 30, width * 1/2, height * 1/2, height/30, height/30, 0, true);
   opc.ledGrid(0, w, h, width * 1/2, height * 1/2, height/w, height/h, 0, true);
   // Make the status LED quiet

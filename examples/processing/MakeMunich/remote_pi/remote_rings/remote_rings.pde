@@ -10,7 +10,7 @@ void setup()
   size(w*10, h*10);
 
   // Connect to the local instance of fcserver. You can change this line to connect to another computer's fcserver
-  opc = new OPC(this, "192.168.0.104", 7890);
+  opc = new OPC(this, "192.168.42.1", 7890);
   opc.ledGrid(0, w, h, width * 1/2, height * 1/2, height/w, height/h, 0, true);
   // Make the status LED quiet
   opc.setStatusLed(false);

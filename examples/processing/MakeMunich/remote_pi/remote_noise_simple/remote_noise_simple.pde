@@ -22,7 +22,7 @@ void setup()
   // Render the noise to a smaller image, it's faster than updating the entire window.
   clouds = createImage(128, 128, RGB);
 
-  opc = new OPC(this, "192.168.0.104", 7890);
+  opc = new OPC(this, "192.168.42.1", 7890);
   /* each panel (1 to 8) has 16x8 pixel
      connected from 1 to 8 in chain
   .---------+---------.
